@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas HTML-CSS 1</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap");
+
+      .container {
+        font-size: 20px;
+        font-family: "Slabo 27px", serif;
+        color: white;
+
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box-atas {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+      .red {
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        padding: 20px 20px 30px 20px;
+      }
+      .blue {
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        padding: 20px 20px 30px 20px;
+      }
+      .green {
+        background-color: green;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        padding: 0 20px;
+
+        border-radius: 20px;
+      }
+
+      .text {
+        position: absolute;
+        margin-left: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-atas">
+        <div class="red">
+          Saya adalah box red berukuran
+          <div>100 px</div>
+        </div>
+        <div class="blue">
+          Saya adalah box blue berukuran
+          <div>100 px</div>
+        </div>
+      </div>
+      <div class="green">
+        <div class="text">saya adalah box green berukuran 300px</div>
+      </div>
+    </div>
+  </body>
+</html>

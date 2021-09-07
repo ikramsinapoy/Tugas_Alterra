@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 468px 1fr;
+      }
+
+      body {
+        color: #19345e;
+      }
+
+      .header {
+        grid-column: 1 / 2;
+        background: rgba(25, 52, 94, 0.65);
+      }
+
+      img {
+        /* background: rgba(25, 52, 94, 0.65);
+        width: 468px; */
+      }
+
+      .background-img {
+        height: 100vh;
+        width: 468px;
+        background: rgba(25, 52, 94, 0.65);
+        /* background-color: rgba(25, 52, 94, 0.65); */
+      }
+
+      .alta-id {
+        position: absolute;
+        width: 275px;
+        height: 142px;
+        left: 96px;
+        top: 279px;
+      }
+
+      .name {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .name-input {
+        width: 468px;
+        height: 28px;
+
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+      }
+
+      .star {
+        color: red;
+      }
+
+      .input-message {
+        width: 468px;
+        height: 112px;
+
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+
+      .btn-submit {
+        font-size: 16px;
+        color: #ffffff;
+        width: 96px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+
+        background: #f47522;
+        border-radius: 20px;
+      }
+
+      .form {
+        margin-left: 200px;
+        margin-top: 83px;
+      }
+
+      h1 {
+        margin-bottom: 12px;
+      }
+      img {
+        /* background-image: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url(.background-img); */
+      }
+
+      @media only screen and (max-width: 700px) {
+        .header {
+          display: none;
+        }
+
+        .form {
+          margin-left: 0;
+          margin-top: 0;
+
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          /* In relation to ELEMENT size */
+          transform: translate(-50%, -50%);
+        }
+
+        .name {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        .name-input {
+          width: 234px;
+          height: 56px;
+
+          background: #ffffff;
+          border: 1px solid #ced4da;
+          border-radius: 4px;
+        }
+
+        .input-message {
+          width: 234px;
+          height: 56px;
+
+          background: #ffffff;
+          border: 1px solid #ced4da;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="img/charles.jpg" alt="Charles" class="background-img" />
+        <img
+          src="img/logo-ALTA-v2@2x.png"
+          alt="Alterra Academy"
+          class="alta-id"
+        />
+      </div>
+
+      <div class="form">
+        <h1>Contact Us</h1>
+        <form action="/">
+          <label for="fullname" class="name"
+            >Full Name<span class="star">*</span></label
+          ><br />
+          <input
+            class="form-control name-input"
+            type="text"
+            placeholder="Your Full Name Here..."
+            aria-label="default input example"
+            name="fullname"
+          /><br /><br />
+
+          <label for="email" class="name"
+            >Email Address<span class="star">*</span></label
+          ><br />
+          <input
+            type="text"
+            id="email"
+            class="name-input"
+            name="email"
+            placeholder="example@domail.com"
+          /><br /><br />
+
+          <label for="phone" class="name"
+            >Phone Number<span class="star">*</span></label
+          ><br />
+          <input
+            type="text"
+            id="phone"
+            class="name-input"
+            name="phone"
+            placeholder="08573890xxxxx"
+          /><br /><br />
+
+          <label for="nationallity" class="name">Nationallity</label><br />
+          <select
+            class="form-select name-input"
+            aria-label="Default select example"
+          >
+            <option selected>Selected</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Singapore">Singapore</option></select
+          ><br /><br />
+
+          <label for="message" class="name">Message</label><br />
+          <textarea
+            name="message"
+            rows="10"
+            cols="30"
+            placeholder="Your Full Name Here..."
+            class="input-message"
+          ></textarea
+          ><br />
+          <br />
+
+          <input type="submit" value="Submit" class="btn-submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

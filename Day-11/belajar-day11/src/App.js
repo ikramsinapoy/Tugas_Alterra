@@ -1,5 +1,6 @@
 import "./Styleapp.css";
 import Todolist from "./component/TodoList";
+import Data from "./component/Data";
 
 function App() {
   return (
@@ -8,10 +9,13 @@ function App() {
         <div className="titlecontainer">
           <h2 className="maintitle">To Do App</h2>
         </div>
-        <Todolist title="Membuat Komponen" completed={true} />
-        <Todolist title="Unit Testing" completed={false} />
-        <Todolist title="Setup Development" completed={true} />
-        <Todolist title="Deploy ke Server" completed={false} />
+        {Data.map((item) => (
+          <Todolist
+            key={item.id}
+            title={item.title}
+            completed={item.completed}
+          />
+        ))}
       </div>
     </div>
   );

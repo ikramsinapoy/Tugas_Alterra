@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styleContact.css" />
+    <title>Contact Us</title>
+
+    <script>
+      function passvalues() {
+        var fullname = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var phonenumber = document.getElementById("phonenumber").value;
+        var nationallity = document.getElementById("nationallity").value;
+        var message = document.getElementById("message").value;
+
+        localStorage.setItem("namavalue", fullname);
+        localStorage.setItem("emailvalue", email);
+        localStorage.setItem("phonevalue", phonenumber);
+        localStorage.setItem("nationalvalue", nationallity);
+        localStorage.setItem("messagevalue", message);
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-container">
+        <img src="/img/charles.jpg" class="img-background" />
+        <img src="img/logo-ALTA-v2@2x.png" class="logo-alta" />
+        <div class="color-overlay"></div>
+      </div>
+
+      <div class="container-form">
+        <form
+          action="review-message.html"
+          id="form"
+          class="needs-validation"
+          novalidate
+        >
+          <div class="mb-3 valid">
+            <label for="fullname" class="form-label text-form"
+              >Full Name<span class="star">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control input-data"
+              id="fullname"
+              placeholder="Your Full Name Here..."
+              name="fullname"
+              required
+            />
+            <div class="invalid-feedback">Full name cannot be empty</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label text-form"
+              >Email Address<span class="star">*</span></label
+            >
+            <input
+              type="email"
+              class="form-control input-data"
+              id="email"
+              placeholder="example@domail.com"
+              name="email"
+              required
+            />
+            <div class="invalid-feedback">Email address cannot be empty</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phonenumber" class="form-label text-form"
+              >Phone Number<span class="star">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control input-data"
+              id="phonenumber"
+              placeholder="08573890xxxx"
+              name="phone"
+              required
+            />
+            <div class="invalid-feedback">Phone number cannot be empty</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="nationallity" class="form-label text-form"
+              >Nationallity</label
+            >
+            <select
+              id="nationallity"
+              class="form-select input-data"
+              aria-label="Default select example"
+            >
+              <option selected>Selected</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Singapore">Singapore</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label text-form">Message</label>
+            <textarea
+              class="form-control input-data"
+              id="message"
+              rows="3"
+              placeholder="Your Full Name Here..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn"
+            value="Click"
+            onclick="passvalues();"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var forms = document.querySelectorAll(".needs-validation");
+
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

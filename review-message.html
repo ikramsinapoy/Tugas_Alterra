@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="result.js"></script>
+    <link rel="stylesheet" href="stylereview.css" />
+    <title>Review Message</title>
+  </head>
+  <body>
+    <div class="main-float">
+      <div class="container">
+        <p>Fullname : <span id="result-name" /></p>
+        <p>Email Address : <span id="result-email" /></p>
+        <p>Phone Number : <span id="result-phone" /></p>
+        <p>Nationallity :<span id="result-nationallity" /></p>
+        <span id="result-message" class="message"></span>
+
+        <div class="bottom">
+          <!-- <img src="/img/horizontal-line.png" class="horizontal-line" /> -->
+          <div class="line"></div>
+          <h3>Thanks for contacting us!</h3>
+          <h3>We will be in touch with you shortly</h3>
+          <form action="home.html">
+            <button class="btn">Home</button>
+          </form>
+        </div>
+        <img src="/img/img-dot.png" class="img-dot" />
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <div class="square"></div>
+    <script>
+      document.getElementById("result-name").innerHTML =
+        localStorage.getItem("namavalue");
+
+      document.getElementById("result-email").innerHTML =
+        localStorage.getItem("emailvalue");
+
+      document.getElementById("result-phone").innerHTML =
+        localStorage.getItem("phonevalue");
+
+      document.getElementById("result-nationallity").innerHTML =
+        localStorage.getItem("nationalvalue");
+
+      document.getElementById("result-message").innerHTML =
+        localStorage.getItem("messagevalue");
+    </script>
+  </body>
+</html>

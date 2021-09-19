@@ -1,0 +1,15 @@
+.containernews {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.card {
+  border: 2px solid black;
+  width: 200px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.text {
+  font-family: sans-serif;
+}
